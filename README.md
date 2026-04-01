@@ -14,7 +14,13 @@
 ## Problem Description
 The task is to model and build a relational database for Athens Pulse Fitness operations, focusing on coordinating members, trainers, classes, and studio rooms. The database manages memberships, trainer assignments, class scheduling, and attendance while maintaining clear relationships between all entities. It enforces key business rules, including room capacity limits and membership tier restrictions, such as limiting Basic members to four classes a month while Unlimited members have unrestricted access. Attendance tracking must also ensure members are marked as “No-Show” if they fail to check in at least five minutes before class begins. The finished system supports meaningful business insights, member attendance trends, and facility usage efficiency.
 ## Data Model
+Our model represents a fitness studio management system. The Members entity is our core entity and represents each individual who uses the studio. It includes information such as their name and contact information. Members and Memberships have a many-to-many relationship. To resolve this, we created the membershipLogs table as an associative entity to track these connections.
 
+Another major part of the model is the relationship between Members and Trainers. Because of the many-to-many relationship between them, we created the associative entity trainingLogs. This table allows the studio to keep track of personal training sessions and the connections between clients and staff.
+
+The model also includes a Classes entity, which represents the different classes offered by the fitness studio, such as yoga, cycling, or strength training. Since many members can attend a class, and trainers teach those classes in specific rooms, we used the classLogs entity to connect Classes, Members, Trainers, and studioRooms. This allows the system to record each class instance, who attended it, who taught it, and where it took place.
+
+Lastly, the model includes the studioRooms and Equipment entities to represent the physical resources of the studio. A studio room may contain many pieces of equipment, and the same type of equipment may appear in multiple rooms, so we created the equipmentInventory table as the associative entity between them. Overall, this model captures both the customer-facing side of the fitness studio, such as memberships and classes, and the operational side, such as trainers, rooms, and equipment.
 <img width="620" height="459" alt="Screenshot 2026-04-01 at 4 38 13 PM" src="https://github.com/user-attachments/assets/f5711b9b-ab73-486f-b52b-610f7167bedd" />
 
 
