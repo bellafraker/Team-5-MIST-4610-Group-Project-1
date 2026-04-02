@@ -22,8 +22,13 @@ The model also includes a Classes entity, which represents the different classes
 
 Lastly, the model includes the studioRooms and Equipment entities to represent the physical resources of the studio. A studio room may contain many pieces of equipment, and the same type of equipment may appear in multiple rooms, so we created the equipmentInventory table as the associative entity between them. Overall, this model captures both the customer-facing side of the fitness studio, such as memberships and classes, and the operational side, such as trainers, rooms, and equipment.
 <img width="620" height="459" alt="Screenshot 2026-04-01 at 4 38 13 PM" src="https://github.com/user-attachments/assets/f5711b9b-ab73-486f-b52b-610f7167bedd" />
-
-
 ## Data Dictionary
+<img width="662" height="293" alt="Screenshot 2026-04-01 at 8 30 37 PM" src="https://github.com/user-attachments/assets/35ea8bf7-5fd2-43b4-9fe2-7e63e0a86345" />
+
+<img width="684" height="238" alt="Screenshot 2026-04-01 at 8 31 16 PM" src="https://github.com/user-attachments/assets/1a1e388d-a6b2-4f47-9da4-04c54c68ada6" />
+
+<img width="669" height="456" alt="Screenshot 2026-04-01 at 8 32 47 PM" src="https://github.com/user-attachments/assets/d98a9e95-f57c-42da-80f7-10cfb7b0c5f3" />
+
+<img width="661" height="194" alt="Screenshot 2026-04-01 at 8 34 08 PM" src="https://github.com/user-attachments/assets/b030c66d-b48c-4a0d-96d6-b54352511b35" />
 ## Queries
 ## Database Information
