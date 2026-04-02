@@ -30,5 +30,6 @@ Lastly, the model includes the studioRooms and Equipment entities to represent t
 <img width="669" height="456" alt="Screenshot 2026-04-01 at 8 32 47 PM" src="https://github.com/user-attachments/assets/d98a9e95-f57c-42da-80f7-10cfb7b0c5f3" />
 
 <img width="661" height="194" alt="Screenshot 2026-04-01 at 8 34 08 PM" src="https://github.com/user-attachments/assets/b030c66d-b48c-4a0d-96d6-b54352511b35" />
+
 ## Queries
 ## Database Information
