@@ -45,4 +45,9 @@ Lastly, the model includes the studioRooms and Equipment entities to represent t
 
 
 ## Queries
+
+1. This query identifies the boutique gym’s highest‑demand classes by measuring total attendance across all logged sessions.
+<img width="1250" height="692" alt="Screenshot 2026-04-03 at 6 37 59 PM" src="https://github.com/user-attachments/assets/c556c484-66d5-46ed-b8c3-e975ec4db740" />
+By aggregating participation counts for each class and seeing them from most to least attended, the gym can quickly see which offerings attract the most members. These insights support strategic decisions such as reallocating studio space, adjusting instructor schedules, increasing class frequency, or investing more resources into the formats that consistently drive engagement.
+
 ## Database Information
