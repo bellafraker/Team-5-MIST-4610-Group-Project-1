@@ -48,17 +48,25 @@ Overall, this model captures both the customer-facing side of the fitness studio
 
 ## Queries
 
-QUERY 1: This query identifies the boutique gym’s highest‑demand classes by measuring total attendance across all logged sessions.
+QUERY 1: 
+This query identifies the boutique gym’s highest‑demand classes by measuring total attendance across all logged sessions.
 <img width="1250" height="692" alt="Screenshot 2026-04-03 at 6 37 59 PM" src="https://github.com/user-attachments/assets/c556c484-66d5-46ed-b8c3-e975ec4db740" />
 By aggregating participation counts for each class and seeing them from most to least attended, the gym can quickly see which offerings attract the most members. These insights support strategic decisions such as reallocating studio space, adjusting instructor schedules, increasing class frequency, or investing more resources into the formats that consistently drive engagement.
 
-QUERY 2: This query identifies studio rooms where the number of attendees exceeds the room’s capacity.
+QUERY 2: 
+This query identifies studio rooms where the number of attendees exceeds the room’s capacity.
 <img width="1250" height="666" alt="Screenshot 2026-04-03 at 7 28 35 PM" src="https://github.com/user-attachments/assets/33f70115-607f-4caa-b3ce-86646361f6a7" />
 By comparing the number of members attending classes in each studio room to that room’s capacity, the gym can quickly identify instances where rooms are being overfilled. These insights support operational decisions such as reallocating classes to larger rooms, limiting class sizes, adjusting scheduling to reduce overcrowding, or ensuring compliance with safety and comfort standards.
 
-QUERY 3: This query identifies the trainers in descending order who have taught the most classes.
+QUERY 3: 
+This query identifies the trainers in descending order who have taught the most classes.
 <img width="1250" height="566" alt="Screenshot 2026-04-03 at 7 36 17 PM" src="https://github.com/user-attachments/assets/5e5cd76a-df8c-475b-89ac-475c68018e93" />
 This query identifies the trainers who have taught the most classes by counting the number of class sessions each trainer has conducted in the classLogs table. It groups the results by trainer ID, first name, and last name, and calculates the total number of classes taught by each trainer. The results are then sorted in descending order, so the trainers with the highest number of classes appear at the top. This allows for easy identification of the most active or in-demand trainers based on class instruction. 
+
+QUERY 4: 
+This query identifies the equipment available in each studio room by linking rooms and equipment through the inventory table.
+<img width="1250" height="551" alt="Screenshot 2026-04-03 at 7 57 50 PM" src="https://github.com/user-attachments/assets/13df5f8b-5bdb-423f-ae6d-1ac9d8fc77a7" />
+This query shows what equipment is assigned to each studio room. It links each studio room to the equipment stored in it using the equipmentInventory table, which acts as a bridge between the two. The query displays the studio ID along with each piece of equipment’s ID, name, and model. These insights help the gym determine which types of classes can be held in each room based on available equipment, and support better planning of class offerings and resource allocation.
 
 
 ## Database Information
