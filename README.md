@@ -52,6 +52,11 @@ Overall, this model captures both the customer-facing side of the fitness studio
 <img width="1250" height="692" alt="Screenshot 2026-04-03 at 6 37 59 PM" src="https://github.com/user-attachments/assets/c556c484-66d5-46ed-b8c3-e975ec4db740" />
 By aggregating participation counts for each class and seeing them from most to least attended, the gym can quickly see which offerings attract the most members. These insights support strategic decisions such as reallocating studio space, adjusting instructor schedules, increasing class frequency, or investing more resources into the formats that consistently drive engagement.
 
+2. This query identifies studio rooms where the number of attendees exceeds the room’s capacity.
+<img width="1250" height="666" alt="Screenshot 2026-04-03 at 7 28 35 PM" src="https://github.com/user-attachments/assets/33f70115-607f-4caa-b3ce-86646361f6a7" />
+By comparing the number of members attending classes in each studio room to that room’s capacity, the gym can quickly identify instances where rooms are being overfilled. These insights support operational decisions such as reallocating classes to larger rooms, limiting class sizes, adjusting scheduling to reduce overcrowding, or ensuring compliance with safety and comfort standards.
+
+
 ## Database Information
 Database Name: ns_Sp26_61608_Group 5
 
