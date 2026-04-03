@@ -58,7 +58,7 @@ By comparing the number of members attending classes in each studio room to that
 
 QUERY 3: This query identifies the trainers in descending order who have taught the most classes.
 <img width="1250" height="566" alt="Screenshot 2026-04-03 at 7 36 17 PM" src="https://github.com/user-attachments/assets/5e5cd76a-df8c-475b-89ac-475c68018e93" />
-This query identifies the trainers who have taught the most classes by counting the number of class sessions each trainer has conducted in the classLogs table. It groups the results by trainer and calculates the total number of classes taught by each trainer. The results are then sorted in descending order, so the trainers with the highest number of classes appear at the top. This allows for easy identification of the most active or in-demand trainers based on class instruction. 
+This query identifies the trainers who have taught the most classes by counting the number of class sessions each trainer has conducted in the classLogs table. It groups the results by trainer ID, first name, and last name, and calculates the total number of classes taught by each trainer. The results are then sorted in descending order, so the trainers with the highest number of classes appear at the top. This allows for easy identification of the most active or in-demand trainers based on class instruction. 
 
 
 ## Database Information
