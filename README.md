@@ -18,9 +18,11 @@ Our model represents a fitness studio management system. The Members entity is o
 
 Another major part of the model is the relationship between Members and Trainers. Because of the many-to-many relationship between them, we created the associative entity trainingLogs. This table allows the studio to keep track of personal training sessions and the connections between clients and staff.
 
-The model also includes a Classes entity, which represents the different classes offered by the fitness studio, such as yoga, cycling, or strength training. Since many members can attend a class, and trainers teach those classes in specific rooms, we used the classLogs entity to connect Classes, Members, Trainers, and studioRooms. This allows the system to record each class instance, who attended it, who taught it, and where it took place.
+The model also includes a Classes entity, which represents the different classes offered by the fitness studio, such as yoga, cycling, or strength training. Because classes occur multiple times and can have many attending members, we used the classLogs entity as a central associative table to connect Classes, Members, Trainers, and studioRooms. This allows the system to record each class instance, who attended it, who taught it, and where it took place. Each of these entities has a one-to-many relationship with classLogs, as one class, member, trainer, or room can appear in many class instances.
 
-Lastly, the model includes the studioRooms and Equipment entities to represent the physical resources of the studio. A studio room may contain many pieces of equipment, and the same type of equipment may appear in multiple rooms, so we created the equipmentInventory table as the associative entity between them. Overall, this model captures both the customer-facing side of the fitness studio, such as memberships and classes, and the operational side, such as trainers, rooms, and equipment.
+Lastly, the model includes the studioRooms and Equipment entities to represent the physical resources of the studio. A studio room may contain many pieces of equipment, and the same type of equipment may appear in multiple rooms, so we created the equipmentInventory table as the associative entity between them.
+
+Overall, this model captures both the customer-facing side of the fitness studio, such as memberships and classes, and the operational side, such as trainers, rooms, and equipment.
 <img width="620" height="459" alt="Screenshot 2026-04-01 at 4 38 13 PM" src="https://github.com/user-attachments/assets/f5711b9b-ab73-486f-b52b-610f7167bedd" />
 ## Data Dictionary
 <img width="662" height="293" alt="Screenshot 2026-04-01 at 8 30 37 PM" src="https://github.com/user-attachments/assets/35ea8bf7-5fd2-43b4-9fe2-7e63e0a86345" />
