@@ -53,3 +53,6 @@ Overall, this model captures both the customer-facing side of the fitness studio
 By aggregating participation counts for each class and seeing them from most to least attended, the gym can quickly see which offerings attract the most members. These insights support strategic decisions such as reallocating studio space, adjusting instructor schedules, increasing class frequency, or investing more resources into the formats that consistently drive engagement.
 
 ## Database Information
+Database Name: ns_Sp26_61608_Group 5
+
+Additional Information: Each query listed above is marked in the database using stored procedures which can be called using the following format:???????
