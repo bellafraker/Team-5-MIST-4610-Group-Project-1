@@ -76,6 +76,10 @@ QUERY 6: This query identifies which members attended which classes by linking t
 <img width="1253" height="697" alt="Screenshot 2026-04-03 at 8 41 48 PM" src="https://github.com/user-attachments/assets/c01b0036-4a58-44ce-848c-98606c921b66" />
 This query identifies which members participated in training sessions by joining the Members and trainingLogs tables. It matches each member to their corresponding training sessions using their member ID. The result displays each member’s name along with their training session ID, providing a clear view of member participation in personal training activities. This helps us track engagement so we know when to upgrade membership tiers, evaluate demand, and track patterns in participation so we know how to best manage our trainers and trainees. 
 
+QUERY 7: Displays each class session along with the associated member, trainer, class name, and studio room.
+<img width="1250" height="690" alt="Screenshot 2026-04-03 at 8 46 20 PM" src="https://github.com/user-attachments/assets/f982ae01-d131-47ee-845e-ce6c65ff5979" />
+This query combines data from 5 of our tables to give a full view of what each session looks like. Using this, we are able to correlate members with the trainer, class name, and studio room to the class session they attended. This is useful because it gives the fitness studio a more complete picture of class activity. Instead of only seeing IDs, management can see the actual people, classes, trainers, and rooms involved in each session. This can help with tracking attendance, reviewing trainer workloads, analyzing class popularity, and checking how studio rooms are being used.
+
 ## Database Information
 Database Name: ns_Sp26_61608_Group 5
 
