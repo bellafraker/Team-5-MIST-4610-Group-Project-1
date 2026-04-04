@@ -75,7 +75,7 @@ QUERY 5: This query lists each member with their membership tier.
 <img width="1251" height="530" alt="Screenshot 2026-04-03 at 8 05 17 PM" src="https://github.com/user-attachments/assets/2fe3937a-0f28-4273-8d00-14bcd3d0c588" />
 This query lists each member along with their corresponding membership tier by joining the Members, membershipLogs, and Memberships tables. The membershipLogs table acts as a link between members and their memberships, allowing the query to match each member to their assigned membership tier. The result displays the member’s ID, first name, last name, and membership tier. This information helps the gym track which members belong to each membership tier, enforce membership rules such as class limits, analyze the popularity of tiers, and support marketing and upgrade decisions.
 
-QUERY 6: This query identifies which members attended which classes by linking them through the classLogs table.
+QUERY 6: This query identifies which members participated in training sessions by joining the Members and trainingLogs tables.
 <img width="1253" height="697" alt="Screenshot 2026-04-03 at 8 41 48 PM" src="https://github.com/user-attachments/assets/c01b0036-4a58-44ce-848c-98606c921b66" />
 This query identifies which members participated in training sessions by joining the Members and trainingLogs tables. It matches each member to their corresponding training sessions using their member ID. The result displays each member’s name along with their training session ID, providing a clear view of member participation in personal training activities. This helps us track engagement so we know when to upgrade membership tiers, evaluate demand, and track patterns in participation so we know how to best manage our trainers and trainees. 
 
