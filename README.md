@@ -47,7 +47,9 @@ Overall, this model captures both the customer-facing side of the fitness studio
 
 
 ## Queries
+
 <img width="555" height="315" alt="Screenshot 2026-04-03 at 9 52 33 PM" src="https://github.com/user-attachments/assets/31bf5cc1-c177-436c-9fbb-897b305cab12" />
+
 
 QUERY 1: 
 This query identifies the boutique gym’s highest‑demand classes by measuring total attendance across all logged sessions.
@@ -89,8 +91,6 @@ QUERY 9: This query counts how many training sessions each trainer has conducted
 
 QUERY 10: This Query groups classes by their type and counts how many classes exist under each type, using REGEXP to ensure the class type contains only valid characters and spaces. The not exists subquery excludes any class that has a log entry with a null member ID, filtering out improperly recorded enrollment records. The having clause then limits results to class types that have at least 1 fully logged class. 
 <img width="1252" height="684" alt="Screenshot 2026-04-03 at 9 49 16 PM" src="https://github.com/user-attachments/assets/6a2b097d-72a8-40ee-81f0-cf8eb97c5676" />
-
-Results: 
 
 ## Database Information
 Database Name: ns_Sp26_61608_Group 5
