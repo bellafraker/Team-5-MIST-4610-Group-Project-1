@@ -95,4 +95,4 @@ QUERY 10: This Query groups classes by their type and counts how many classes ex
 ## Database Information
 Database Name: ns_Sp26_61608_Group 5
 
-Additional Information: Each query listed above is marked in the database using stored procedures which can be called using the following format:???????
+Additional Information: Each query listed above is marked in the database using stored procedures which can be called using the following format:Q1, Q2, Q3
