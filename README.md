@@ -80,45 +80,14 @@ QUERY 7: Displays each class session along with the associated member, trainer, 
 <img width="1250" height="690" alt="Screenshot 2026-04-03 at 8 46 20 PM" src="https://github.com/user-attachments/assets/f982ae01-d131-47ee-845e-ce6c65ff5979" />
 This query combines data from 5 of our tables to give a full view of what each session looks like. Using this, we are able to correlate members with the trainer, class name, and studio room to the class session they attended. This is useful because it gives the fitness studio a more complete picture of class activity. Instead of only seeing IDs, management can see the actual people, classes, trainers, and rooms involved in each session. This can help with tracking attendance, reviewing trainer workloads, analyzing class popularity, and checking how studio rooms are being used.
 
-Query 8: This query counts total member enrollments per class, but only for classes that have a trainer assigned to them. This is confirmed through a subquery filtering classLogs for the non-null trainer ID’s. There where clause also excludes any classes missing a class type, keeping the results clean. By us sorting by totalEnrollments DESC the results display which trainer-led classes are drawing the most members. 
+QUERY 8: This query counts total member enrollments per class, but only for classes that have a trainer assigned to them. This is confirmed through a subquery filtering classLogs for the non-null trainer ID’s. There where clause also excludes any classes missing a class type, keeping the results clean. By us sorting by totalEnrollments DESC the results display which trainer-led classes are drawing the most members. 
+<img width="1251" height="692" alt="Screenshot 2026-04-03 at 9 47 24 PM" src="https://github.com/user-attachments/assets/770e91a3-0404-4de5-b399-3bfd9d94bd4a" />
 
-SELECT c.className, c.classType, COUNT(cl.Members_memberID) AS totalEnrollments 
-FROM Classes c 
-JOIN classLogs cl ON c.classID = cl.Classes_classID 
-WHERE c.classType IS NOT NULL 
-  AND c.classID IN ( 
-      SELECT Classes_classID 
-      FROM classLogs 
-      WHERE Trainers_trainerID IS NOT NULL 
-  ) 
-GROUP BY c.classID, c.className, c.classType 
-ORDER BY totalEnrollments DESC; 
+QUERY 9: This query counts how many training sessions each trainer has conducted, filtered out any trainers with missing names or specializations. The Group BY aggregates sessions per trainer and the Having clause limits results to only trainers who have logged more than one session. The data displays which trainers are actively working with members. 
+<img width="1249" height="687" alt="Screenshot 2026-04-03 at 9 48 12 PM" src="https://github.com/user-attachments/assets/2805c86c-89ff-4f21-82f9-2d93c7465570" />
 
-Query 9: This query counts how many training sessions each trainer has conducted, filtered out any trainers with missing names or specializations. The Group BY aggregates sessions per trainer and the Having clause limits results to only trainers who have logged more than one session. The data displays which trainers are actively working with members. 
-
-SELECT t.trainerFName, t.trainerLName, t.specialization, COUNT(tl.trainingSessionID) AS sessionCount 
-FROM Trainers t 
-JOIN trainingLogs tl ON t.trainerID = tl.Trainers_trainerID 
-WHERE t.specialization IS NOT NULL 
-  AND t.trainerFName IS NOT NULL 
-GROUP BY t.trainerID, t.trainerFName, t.trainerLName, t.specialization 
-HAVING COUNT(tl.trainingSessionID) > 1; 
-
-Query 10: This Query groups classes by their type and counts how many classes exist under each type, using REGEXP to ensure the class type contains only valid characters and spaces. The not exists subquery excludes any class that has a log entry with a null member ID, filtering out improperly recorded enrollment records. The having clause then limits results to class types that have at least 1 fully logged class. 
-
-SELECT 
-    c.classType, 
-    COUNT(c.classID) AS totalClasses 
-FROM Classes c 
-WHERE c.classType REGEXP '^[A-Za-z ]+$' 
-  AND NOT EXISTS ( 
-      SELECT 1 
-      FROM classLogs cl 
-      WHERE cl.Classes_classID = c.classID 
-        AND cl.Members_memberID IS NULL 
-  ) 
-GROUP BY c.classType 
-HAVING COUNT(c.classID) >= 1; 
+QUERY 10: This Query groups classes by their type and counts how many classes exist under each type, using REGEXP to ensure the class type contains only valid characters and spaces. The not exists subquery excludes any class that has a log entry with a null member ID, filtering out improperly recorded enrollment records. The having clause then limits results to class types that have at least 1 fully logged class. 
+<img width="1252" height="684" alt="Screenshot 2026-04-03 at 9 49 16 PM" src="https://github.com/user-attachments/assets/6a2b097d-72a8-40ee-81f0-cf8eb97c5676" />
 
 Results: 
 
