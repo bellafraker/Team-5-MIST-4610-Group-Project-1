@@ -48,8 +48,7 @@ Overall, this model captures both the customer-facing side of the fitness studio
 
 ## Queries
 
-<img width="555" height="315" alt="Screenshot 2026-04-03 at 9 52 33 PM" src="https://github.com/user-attachments/assets/31bf5cc1-c177-436c-9fbb-897b305cab12" />
-
+<img width="554" height="318" alt="Screenshot 2026-04-03 at 10 24 08 PM" src="https://github.com/user-attachments/assets/290761d3-fd61-40ee-8acd-562f112ea1ad" />
 
 QUERY 1: 
 This query identifies the boutique gym’s highest‑demand classes by measuring total attendance across all logged sessions.
