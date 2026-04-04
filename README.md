@@ -68,6 +68,9 @@ This query identifies the equipment available in each studio room by linking roo
 <img width="1250" height="551" alt="Screenshot 2026-04-03 at 7 57 50 PM" src="https://github.com/user-attachments/assets/13df5f8b-5bdb-423f-ae6d-1ac9d8fc77a7" />
 This query shows what equipment is assigned to each studio room. It links each studio room to the equipment stored in it using the equipmentInventory table, which acts as a bridge between the two. The query displays the studio ID along with each piece of equipment’s ID, name, and model. These insights help the gym determine which types of classes can be held in each room based on available equipment, and support better planning of class offerings and resource allocation.
 
+QUERY 5: This query lists each member with their membership tier
+<img width="1251" height="530" alt="Screenshot 2026-04-03 at 8 05 17 PM" src="https://github.com/user-attachments/assets/2fe3937a-0f28-4273-8d00-14bcd3d0c588" />
+This query lists each member along with their corresponding membership tier by joining the Members, membershipLogs, and Memberships tables. The membershipLogs table acts as a link between members and their memberships, allowing the query to match each member to their assigned membership tier. The result displays the member’s ID, first name, last name, and membership tier. This information helps the gym track which members belong to each membership tier, enforce membership rules such as class limits, analyze the popularity of tiers, and support marketing and upgrade decisions.
 
 ## Database Information
 Database Name: ns_Sp26_61608_Group 5
